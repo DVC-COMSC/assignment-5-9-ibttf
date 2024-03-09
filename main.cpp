@@ -5,20 +5,18 @@ using namespace std;
 int main()
 {
 	int prev, current;
+	bool first = true;
 	while (cin >> current)
 	{
-		if (current > prev)
-		{
+		if (!first && current > prev){
 			cout  << endl;
 			return 0;
 		}
-		else
-		{
+		else{
 			cout << current << endl;
 		}
-		prev = current;
 	}
-	/* ****************************
-	// Complete this code.
-	*************************** */
-}
+	prev = current;
+	first=false;
+	}
+
